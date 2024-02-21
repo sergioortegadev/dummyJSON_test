@@ -1,0 +1,108 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  overflow: -moz-scrollbars-none;
+}
+
+:root {
+  color-scheme: light dark;
+  --brand-color-main: #ff407d;
+  --brand-color-main-hover: #da396c;
+  --brand-color-second: #ffcad4;
+  --brand-color-thirth: #40679e;
+  --font-main: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans",
+    "Helvetica Neue", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-main);
+  overflow-x: hidden;
+}
+h1 {
+  font-size: larger;
+}
+form {
+  margin-bottom: 2rem;
+}
+.cards {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 95vw;
+}
+figure {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0.1rem;
+  border: 1px solid #77777777;
+  border-radius: 0.5rem;
+  padding: 0.75rem;
+  text-align: center;
+}
+figure img {
+  align-self: center;
+  min-width: 8rem;
+  max-width: 8rem;
+  height: 8rem;
+  object-fit: cover;
+}
+.figure-data {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.figure-data button {
+  font-weight: bold;
+  background-color: var(--brand-color-main);
+  padding: 0.25rem 0.75rem;
+  border: 1px solid var(--brand-color-main);
+  border-radius: 0.5rem;
+  margin: 0.1rem;
+  width: fit-content;
+}
+.figure-data button:hover,
+.figure-data button:active {
+  background-color: var(--brand-color-main-hover);
+}
+
+@media (min-width: 400px) {
+  figure {
+    flex-direction: column;
+    width: 10rem;
+  }
+  .cards {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+@media (min-width: 700px) {
+  h1 {
+    font-size: xx-large;
+  }
+  figure {
+    flex-direction: column;
+    margin: 0.25rem;
+    border: 1px solid #77777777;
+    border-radius: 1rem;
+    padding: 1rem;
+    text-align: center;
+    width: 16rem;
+  }
+  figure img {
+    height: 14rem;
+    min-width: 14rem;
+    max-width: 14rem;
+  }
+}
